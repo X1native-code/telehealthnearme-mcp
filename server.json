@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pro.telehealthnearme/telehealth-compare",
+  "title": "Telehealth near me",
+  "description": "Compare U.S. telehealth programs (GLP-1, TRT, longevity): prices, labs, LegitScript, sources.",
+  "version": "1.0.0",
+  "websiteUrl": "https://telehealthnearme.pro",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://telehealthnearme.pro/mcp"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "telehealthnearme": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://telehealthnearme.pro/mcp"]
+    }
+  }
+}

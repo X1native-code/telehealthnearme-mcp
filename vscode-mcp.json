@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "telehealthnearme": {
+      "type": "http",
+      "url": "https://telehealthnearme.pro/mcp"
+    }
+  }
+}
