@@ -3,12 +3,32 @@
   "name": "pro.telehealthnearme/telehealth-compare",
   "title": "Telehealth near me",
   "description": "Compare U.S. telehealth programs (GLP-1, TRT, longevity): prices, labs, LegitScript, sources.",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "websiteUrl": "https://telehealthnearme.pro",
   "remotes": [
     {
       "type": "streamable-http",
       "url": "https://telehealthnearme.pro/mcp"
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/X1native-code/telehealthnearme-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://telehealthnearme.pro/brand/icon-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    },
+    {
+      "src": "https://telehealthnearme.pro/brand/icon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
     }
   ]
 }

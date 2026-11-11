@@ -1,11 +1,13 @@
 # Telehealth near me — MCP server
 
+[![mcptry](https://mcptry.com/badge/pro.telehealthnearme/telehealth-compare)](https://mcptry.com/servers/pro.telehealthnearme/telehealth-compare)
+
 Public, read-only [Model Context Protocol](https://modelcontextprotocol.io) server for comparing **U.S. online telehealth programs**: GLP-1 weight loss (semaglutide, tirzepatide), men's health (TRT, ED, hair loss), longevity (sermorelin, NAD+) and women's health (menopause, hair loss).
 
 - **Endpoint:** `https://telehealthnearme.pro/mcp`
 - **Transport:** Streamable HTTP (stateless JSON-RPC)
 - **Auth:** none — free, no API key
-- **Official MCP Registry:** `pro.telehealthnearme/telehealth-compare`
+- **Official MCP Registry:** `pro.telehealthnearme/telehealth-compare` (v1.0.2)
 - **Website:** https://telehealthnearme.pro
 
 Every value comes with its **source and check date**. Values that aren't published are `null` — never estimated. Prices are re-checked monthly against each provider's official website.
@@ -93,6 +95,25 @@ claude mcp add --transport http telehealthnearme https://telehealthnearme.pro/mc
 - `llms.txt`: https://telehealthnearme.pro/llms.txt
 - Any page as Markdown: send `Accept: text/markdown`
 - Server card: https://telehealthnearme.pro/.well-known/mcp/server-card.json
+
+## When agents should use it
+
+- The user asks what an online telehealth program costs ("cheapest compounded tirzepatide", "online TRT price").
+- The user asks which programs offer a treatment, fit a budget, or serve a state.
+- The user asks whether a provider is legitimate (LegitScript status) or how two providers compare.
+
+Flow: `list_categories` → `find_programs` → `get_program` / `compare_programs`.
+
+## Privacy and data
+
+- **No patient data.** The server is read-only and needs no personal or health information — only filters such as specialty, treatment, state and budget. Don't send names, contact details or medical history.
+- **What is logged:** tool name, filters, number of results, client name and country. No IP addresses, no cookies, no conversation content.
+- **Data sources:** each program's official website (prices, plans, requirements), checked and dated; LegitScript seals verified on legitscript.com; third-party reviews only when flagged as `third-party-reported`.
+- Privacy policy: https://telehealthnearme.pro/privacy/
+
+## Reliability
+
+Hosted on Cloudflare's edge network (stateless, no database to go down). Live health and score: [mcptry](https://mcptry.com/servers/pro.telehealthnearme/telehealth-compare).
 
 ## Disclosures
 
